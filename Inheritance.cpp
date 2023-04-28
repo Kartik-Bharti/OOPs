@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-class kartik
+
+class kartik1
 {
 private:
     int a = 19;
@@ -10,12 +11,13 @@ public:
     {
         cout << "I am " << a << " years old \n";
     };
-    void show();
+    void show1();
 };
-class kartik2 : public kartik
+class kartik2 : public kartik1
 {
-private:
+protected:
     int b = 29;
+
 public:
     void call2()
     {
@@ -25,17 +27,15 @@ public:
 };
 class kartik3 : protected kartik2
 {
-private:
-    int x = 23;
-
 public:
     void show3()
     {
-        cout << "my friend age is " << x << endl;
+        cout << "my friend age is " << 23 << endl;
     }
 };
-// demo of scope resolution operator
-void kartik::show()
+
+// Demo of Scope-resolution Operator
+void kartik1::show1()
 {
     cout << "Hi I am scope resolution opertaor for parent class\n";
 }
@@ -46,11 +46,11 @@ void kartik2::show2()
 int main()
 {
     cout << "Hi everyone my name is kartik bharti\n";
-    kartik2 obj;
+    class kartik2 obj;
     kartik3 obj2;
     obj.call();
     obj.call2();
-    obj.show();
+    obj.show1();
     obj.show2();
     obj2.show3();
     return 0;
