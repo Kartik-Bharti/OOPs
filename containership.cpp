@@ -15,7 +15,7 @@ class kartik1
 class kartik2
 {
     public:
-    class kartik1 obj;
+    class kartik1 obj1;
     void show1()
     {
         cout<<"Hi I am member of class kartik2\n";
@@ -24,7 +24,7 @@ class kartik2
 int main()
 {
     kartik2 obj;
-    obj.obj.show1();
+    obj.obj1.show1();
     obj.show1();
     return 0;
 }
