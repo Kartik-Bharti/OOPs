@@ -11,7 +11,7 @@ private:
 public:
     void enter()
     {
-        cout << "enetr value of a and b\n";
+        cout << "enter value of a and b\n";
         cin >> a >> b;
     }
     void display()
