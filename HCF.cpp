@@ -20,7 +20,6 @@ void GCD(int x, int y)
             cout << "GCD of " << x << " and " << y << " is :-  " << i << endl;
             exit(0);
         }
-        printf("HI");
         cout << i << endl;
     }
 };

@@ -7,15 +7,15 @@ private:
     int a = 19;
 
 public:
-    void call()
+    void call1()
     {
         cout << "I am " << a << " years old \n";
     };
     void show1();
 };
-class kartik2 : public kartik1
+
+class kartik2 : protected kartik1
 {
-protected:
     int b = 29;
 
 public:
@@ -23,13 +23,16 @@ public:
     {
         cout << "I am " << b << " years old \n";
     }
-    void show2();
 };
-class kartik3 : protected kartik2
+
+class kartik3 : public kartik2
 {
 public:
     void show3()
     {
+        void call1();
+        void show1();
+        void call2();
         cout << "my friend age is " << 23 << endl;
     }
 };
@@ -39,19 +42,10 @@ void kartik1::show1()
 {
     cout << "Hi I am scope resolution opertaor for parent class\n";
 }
-void kartik2::show2()
-{
-    cout << "Hi I am scope resolution opertaor for child class\n";
-}
+
 int main()
 {
-    cout << "Hi everyone my name is kartik bharti\n";
-    class kartik2 obj;
-    kartik3 obj2;
-    obj.call();
-    obj.call2();
-    obj.show1();
-    obj.show2();
-    obj2.show3();
+    kartik3 obj1;
+    obj1.show3();
     return 0;
 }
