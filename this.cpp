@@ -1,18 +1,10 @@
 #include <iostream>
 using namespace std;
 
-class practice
+class thisquestion
 {
 private:
    int a, b;
-   class kartik
-   {
-   public:
-      sk()
-      {
-         printf("Kartik");
-      }
-   };
 
 public:
    void abc(int a)
@@ -23,20 +15,12 @@ public:
    {
       cout << a << endl;
    }
-
-protected:
-   void sk()
-   {
-      cout << "Iam internal";
-   }
 };
 
 int main()
 {
-   practice p;
+   thisquestion p;
    p.abc(12);
    p.show();
-   // practice::kartik k;
-   // k.sk()
    return 0;
 }

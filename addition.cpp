@@ -1,35 +1,38 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 class sum
 {
-    private:
+private:
     int a;
-    public:
+
+public:
     void addition(int x)
     {
-        a=x;
+        a = x;
     }
     void display()
     {
-        cout<<a<<endl;
+        cout << a << endl;
     }
     sum operator+(sum bb)
     {
         sum cc;
-        cc.a=a+bb.a;
+        cc.a = a + bb.a;
         return cc;
     }
 };
+
 int main()
-{ 
-    sum aa,bb,cc;
+{
+    sum aa, bb, cc;
     aa.addition(23);
     bb.addition(43);
-    cout<<("Number before addition is\n");
+    cout << ("Number before addition is\n");
     aa.display();
     bb.display();
-    cout<<"number after addition is \n";
-    cc=aa+bb;
+    cout << "number after addition is \n";
+    cc = aa + bb;
     cc.display();
     return 0;
 }

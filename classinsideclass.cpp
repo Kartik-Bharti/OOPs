@@ -3,7 +3,7 @@ using namespace std;
 
 class practice
 {
-private:
+public:
    int a, b;
    class kartik
    {
@@ -23,12 +23,6 @@ public:
    {
       cout << a << endl;
    }
-
-protected:
-   void sk()
-   {
-      cout << "Iam internal";
-   }
 };
 
 int main()
@@ -36,7 +30,7 @@ int main()
    practice p;
    p.abc(12);
    p.show();
-   // practice::kartik k;
-   // k.sk()
+   practice::kartik k;
+   k.sk();
    return 0;
 }
