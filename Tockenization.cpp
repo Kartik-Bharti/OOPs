@@ -1,15 +1,16 @@
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 using namespace std;
+
 int main()
 {
-    char str[]="Hi my name is kartik my wife name is somya";
-    char *sk;
-    sk=strtok(str," ");
-    while (sk!=NULL)
+    char str[] = "Hi my name is kartik";
+    char *token;
+    token = strtok(str, " ");
+    while (token != NULL)
     {
-        cout<<sk<<endl;
-        sk=strtok(NULL," ");
+        cout << token << endl;
+        token = strtok(NULL, " ");
     }
     return 0;
 }

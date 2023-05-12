@@ -8,7 +8,7 @@ private:
    class kartik
    {
    public:
-      sk()
+      void sk()
       {
          printf("Kartik");
       }
